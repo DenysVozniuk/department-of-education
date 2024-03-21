@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Context from "./Context";
 import Header from "./Components/Header";
@@ -16,6 +16,11 @@ function App() {
   const [orderList, setOrderList] = useState(JSON.parse(localStorage.getItem('orderList')) || []);
   const [totalSum, setTotalSum] = useState(JSON.parse(localStorage.getItem('totalSum')) || null);
   const [cartCount, setCartCount] = useState(JSON.parse(localStorage.getItem('cartCount')) || null);
+  const aboutUsSection = useRef(null);
+  const booksSection = useRef(null);
+  const projectsSection = useRef(null);
+  const institutionsSection = useRef(null);
+  const contactsSection = useRef(null);
 
   const handlerShowLanguageButton = () => {
     setIsShowLanguageButton((prevState) => !prevState);
@@ -70,7 +75,12 @@ function App() {
     isMobileMenuButtonActive,
     setIsMobileMenuButtonActive,
     isMobileMenuOpen,
-    setIsMobileMenuOpen
+    setIsMobileMenuOpen,
+    aboutUsSection,
+    booksSection,
+    projectsSection,
+    institutionsSection,
+    contactsSection
   };
   return (
     <Router>

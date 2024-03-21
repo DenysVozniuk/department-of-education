@@ -1,34 +1,44 @@
 import React, {useContext} from "react";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import Context from "../../Context";
 
 const Navigation = (props) => {
     const { navClassName, listClassName, itemClassName, linkClassName, isLastClassName = false } = props;
     const contextValue = useContext(Context);
+    //const navigate = useNavigate();
+    const location = useLocation();
 
-    const handlerClick = (e, id) => {
+    const handlerClickOrder = () => {
+        contextValue.setIsMobileMenuOpen(() => false);
+    }
+
+    const handlerClickHome = (e, id) => {
         e.preventDefault();
         contextValue.setIsMobileMenuOpen(() => false);
-        window.location.href = `${window.location.origin}${id}`;
-        //window.location.href = `/${id}`;
+        window.scroll({
+            left: 0,
+            top: id.offsetTop,
+            behavior: 'smooth'
+        });
     }
 
     return (
         <nav className={navClassName}>
             <ul className={listClassName}>
                 <li className={itemClassName}>
-                    <a href={`${window.location.origin}#about-us`} className={linkClassName} onClick={(e) => handlerClick(e, '#about-us')}>Про нас</a>
+                    <Link to="/" className={linkClassName} onClick={!location.pathname.includes('order') ? (e) => handlerClickHome(e, contextValue.aboutUsSection.current) : () => handlerClickOrder()}>Про нас</Link>
                 </li>
                 <li className={itemClassName}>
-                    <a href={`${window.location.origin}#books`} className={linkClassName} onClick={(e) => handlerClick(e, '#books')}>Книги</a>
+                    <Link to="/" className={linkClassName} onClick={!location.pathname.includes('order') ? (e) => handlerClickHome(e, contextValue.booksSection.current) : () => handlerClickOrder()}>Книги</Link>
                 </li>
                 <li className={itemClassName}>
-                    <a href={`${window.location.origin}#projects`} className={linkClassName} onClick={(e) => handlerClick(e, '#projects')}>Проєкти</a>
+                    <Link to="/" className={linkClassName} onClick={!location.pathname.includes('order') ? (e) => handlerClickHome(e, contextValue.projectsSection.current) : () => handlerClickOrder()}>Проєкти</Link>
                 </li>
                 <li className={itemClassName}>
-                    <a href={`${window.location.origin}#institutions`} className={linkClassName} onClick={(e) => handlerClick(e, '#institutions')}>Навчальні заклади</a>
+                    <Link to="/" className={linkClassName} onClick={!location.pathname.includes('order') ? (e) => handlerClickHome(e, contextValue.institutionsSection.current) : () => handlerClickOrder()}>Навчальні заклади</Link>
                 </li>
                 <li className={itemClassName}>
-                    <a href={`${window.location.origin}#contacts`} className={`${linkClassName}${isLastClassName ? " last" : ""}`} onClick={(e) => handlerClick(e, '#contacts')}>Контакти</a>
+                    <Link to="/" className={`${linkClassName}${isLastClassName ? " last" : ""}`} onClick={!location.pathname.includes('order') ? (e) => handlerClickHome(e, contextValue.contactsSection.current) : () => handlerClickOrder()}>Контакти</Link>
                 </li>
             </ul>
         </nav>

@@ -16,13 +16,13 @@ const FooterBody = () => {
                         <div className="footer-email-wrap">
                             {emailIcon}
                         </div>
-                        <a className="footer-text footer-email-link" target="_blank" href="/">info@chveu-osvita.org.ua</a>
+                        <a className="footer-text footer-email-link" target="_blank" href="#">info@chveu-osvita.org.ua</a>
                     </div>
                     <div className="footer-body-links">
                         <div className="footer-phone-wrap">
                             {phoneIcon}
                         </div>
-                        <a className="footer-text footer-phone-link" target="_blank" href="/">(044) 452 21 40</a>
+                        <a className="footer-text footer-phone-link" target="_blank" href="#">(044) 452 21 40</a>
                     </div>
                     {/* <div className="footer-body-content">
                         <p className="footer-text">3 Oniskevycha st., Kyiv, Ukraine 03115.</p>

@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import Context from "../../../Context";
 import { bookPhoto1, bookPhoto2, bookPhoto3, bookPhoto4, bookPhoto5, bookPhoto6, bookPhoto7, bookPhoto8, bookPhoto9,
      bookPhoto10, bookPhoto11, bookPhoto12, bookPhoto13, bookPhoto14, bookPhoto15 } from "../../../img/Books";
 import BookList from "./BookList";
 
 const Books = () => {
     const [divideSize, setDivideSize] = useState(3);
+    const contextValue = useContext(Context);
 
     useEffect(() => {
         const handleResize = () => {
@@ -204,7 +206,7 @@ const Books = () => {
     }
 
     return (
-        <div id="books" className="books-section">
+        <div ref={contextValue.booksSection} id="books" className="books-section">
             <div className="container books-container">
                 <h2>Книги</h2>
                 <div className="books-cards-container">

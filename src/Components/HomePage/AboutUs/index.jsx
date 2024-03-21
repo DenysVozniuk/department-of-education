@@ -1,10 +1,12 @@
-import React from "react";
+import React, {useContext} from "react";
+import Context from "../../../Context";
 import LineCircle from "./components/LineCircle";
 import { logoIcon } from "../../../img/About-us";
 
 function AboutUs() {
+    const contextValue = useContext(Context);
   return (
-    <div id="about-us" className="about-us">
+    <div ref={contextValue.aboutUsSection} id="about-us" className="about-us">
         <div className="about-us-background"></div>
         {/* <div className="line-circle-wrap" style={{top: '606px', left: '-222px'}}>
             <LineCircle rotate={-43} lineWidth={740} />

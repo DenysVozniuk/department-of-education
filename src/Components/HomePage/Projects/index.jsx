@@ -1,9 +1,11 @@
-import React from "react";
+import React, {useContext} from "react";
+import Context from "../../../Context";
 import ProjectList from "./ProjectList";
 import { projectPhoto1, projectPhoto2, projectPhoto3, projectPhoto4, projectPhoto5, projectPhoto6, projectPhoto7 } from "../../../img/Projects";
 
 
 const Projects = () => {
+    const contextValue = useContext(Context);
     const projectList = [
         {
             photo: projectPhoto1,
@@ -56,7 +58,7 @@ const Projects = () => {
         }
     ];
     return (
-        <div id="projects" className="projects-section">
+        <div ref={contextValue.projectsSection} id="projects" className="projects-section">
             <div className="container projects-container">
                 <h2>Наші проєкти</h2>
                 <div className="projects-cards-container">

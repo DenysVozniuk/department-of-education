@@ -1,9 +1,11 @@
-import React from "react";
+import React, {useContext} from "react";
+import Context from "../../../Context";
 import InstitutionsList from "./components/InstitutionsList";
 import { institutionImage1, institutionImage2, institutionImage3, institutionImage4,
 institutionImage5, institutionImage6, institutionImage7, institutionImage8 } from "../../../img/Institutions";
 
 const Institutions = () => {
+    const contextValue = useContext(Context);
     const nonBreakingSpace = '\u00A0';
     const institutionList = [
         {
@@ -56,7 +58,7 @@ const Institutions = () => {
         }
     ];
     return (
-        <div id="institutions" className="institutions-section">
+        <div ref={contextValue.institutionsSection} id="institutions" className="institutions-section">
             <div className="container institution-container">
                 <h2>Навчальні заклади</h2>
                 <div className="institutions-cards-container">
