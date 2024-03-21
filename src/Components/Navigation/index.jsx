@@ -8,7 +8,8 @@ const Navigation = (props) => {
     const handlerClick = (e, id) => {
         e.preventDefault();
         contextValue.setIsMobileMenuOpen(() => false);
-        window.location.href = window.location.origin + id;
+        //window.location.href = window.location.origin + id;
+        window.location.href = `/${id}`;
     }
 
     return (

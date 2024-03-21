@@ -40,13 +40,13 @@ function App() {
     };
   }, []);
 
-  useEffect(() => {
-    isMobileMenuButtonActive ? (
-      document.querySelector('body').setAttribute('style', 'overflow-y: hidden')
-    ) : (
-      document.querySelector('body').setAttribute('style', '')
-    );
-  }, [isMobileMenuButtonActive]);
+  // useEffect(() => {
+  //   isMobileMenuButtonActive ? (
+  //     document.querySelector('body').setAttribute('style', 'overflow-y: hidden')
+  //   ) : (
+  //     document.querySelector('body').setAttribute('style', '')
+  //   );
+  // }, [isMobileMenuButtonActive]);
 
   useEffect(() => {
     isMobileMenuOpen ? (
