@@ -41,7 +41,6 @@ function App() {
   }, []);
 
   useEffect(() => {
-    console.log(isMobileMenuButtonActive);
     isMobileMenuButtonActive ? (
       document.querySelector('body').setAttribute('style', 'overflow-y: hidden')
     ) : (
@@ -51,10 +50,10 @@ function App() {
 
   useEffect(() => {
     isMobileMenuOpen ? (
-      setIsMobileMenuButtonActive((prevState) => !prevState)
+      setIsMobileMenuButtonActive(() => true)
     ) : (
       setTimeout(() => {
-        setIsMobileMenuButtonActive((prevState) => !prevState)
+        setIsMobileMenuButtonActive(() => false)
       }, 290)
     )
   }, [isMobileMenuOpen])

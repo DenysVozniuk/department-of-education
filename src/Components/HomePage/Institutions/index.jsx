@@ -9,7 +9,7 @@ const Institutions = () => {
         {
             name: 'Київський біблійний інститут',
             address: `Адреса: вул.${nonBreakingSpace}Оніскевича, 3, м.${nonBreakingSpace}Київ, 03115`,
-            href: '#',
+            href: 'https://kbi.org.ua/',
             image: institutionImage1
         },
         {
@@ -21,7 +21,7 @@ const Institutions = () => {
         {
             name: 'Львівська Богословська Семінарія',
             address: `Адреса: вул.${nonBreakingSpace}Скрипника, 2а, м.${nonBreakingSpace}Львів, 79049`,
-            href: '#',
+            href: 'https://lts.lviv.ua/',
             image: institutionImage3
         },
         {
