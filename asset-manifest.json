@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/department-of-education/static/css/main.63cdf732.css",
-    "main.js": "/department-of-education/static/js/main.938a210c.js",
+    "main.css": "/department-of-education/static/css/main.cbda6433.css",
+    "main.js": "/department-of-education/static/js/main.7634c39f.js",
     "static/js/787.28cb0dcd.chunk.js": "/department-of-education/static/js/787.28cb0dcd.chunk.js",
     "static/media/Background.webp": "/department-of-education/static/media/Background.aa100ac97e8274c81e5c.webp",
     "static/media/Book-1.png": "/department-of-education/static/media/Book-1.265d93f24744c3b54337.png",
@@ -59,12 +59,12 @@
     "static/media/email.svg": "/department-of-education/static/media/email.d4b0b59d8e2183a4a281267103fd79d4.svg",
     "static/media/dollar-icon.svg": "/department-of-education/static/media/dollar-icon.04cc2a8c8a151d148bb4088f8ae3a2a4.svg",
     "static/media/wave.svg": "/department-of-education/static/media/wave.a3dad58337c9b3b330e5d15602c2fdd9.svg",
-    "main.63cdf732.css.map": "/department-of-education/static/css/main.63cdf732.css.map",
-    "main.938a210c.js.map": "/department-of-education/static/js/main.938a210c.js.map",
+    "main.cbda6433.css.map": "/department-of-education/static/css/main.cbda6433.css.map",
+    "main.7634c39f.js.map": "/department-of-education/static/js/main.7634c39f.js.map",
     "787.28cb0dcd.chunk.js.map": "/department-of-education/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.63cdf732.css",
-    "static/js/main.938a210c.js"
+    "static/css/main.cbda6433.css",
+    "static/js/main.7634c39f.js"
   ]
 }
