@@ -73,6 +73,18 @@ h2 {
     flex: 1;
 }
 
+.no-scroll {
+    overflow-y: hidden;
+}
+
+html.no-scroll,
+body.no-scroll {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    overflow: hidden;
+}
+
 .container {
     width: 100%;
     margin: 0 auto;
@@ -763,6 +775,7 @@ h2 {
 .book-card-img-container {
     width: 208px;
     height: 278px;
+    cursor: pointer;
 }
 
 .book-card-img {
@@ -1089,7 +1102,7 @@ h2 {
 /* ORDER PAGE */
 .order-page-container {
     max-width: 1050px;
-    padding: 158px 15px 150px;
+    padding: 158px 15px 90px;
     min-height: calc(100vh - 255.67px);
     position: relative;
 }
@@ -1111,14 +1124,24 @@ h2 {
     text-align: center;
     max-width: 678px;
     margin: 0 auto;
+    margin-bottom: 50px;
 }
 
 .order-body {
     display: flex;
+    flex-direction: column;
+}
+
+.order-body h2 {
+    font-size: 40px;
+}
+
+.order-form-body {
+    display: flex;
     align-items: center;
 }
 
-.order-body-background {
+.order-form-background {
     width: 482px;
     height: 573px;
     background-image: linear-gradient(180deg, rgba(217, 217, 217, 0) 15.168%,rgba(255, 255, 255) 88.796%), url('../img/Order-page/Order-image.png');
@@ -1166,8 +1189,8 @@ h2 {
     padding: 6px 15px 10px;
     background-color: #000000;
     border-radius: 10px;
-    position: absolute;
-    bottom: 115px;
+    /* position: absolute;
+    bottom: 115px; */
     transition: 0.3s;
     cursor: pointer;
 }
@@ -1181,11 +1204,12 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin-bottom: 100px;
     row-gap: 22px;
 }
 
 .order-card {
-    max-width: 401px;
+    max-width: 423px;
     display: flex;
 }
 
@@ -1198,7 +1222,7 @@ h2 {
 .order-card-content {
     display: flex;
     flex-direction: column;
-    margin-right: 3px;
+    /* margin-right: 0; */
     justify-content: center;
     align-items: flex-start;
 }
@@ -1208,6 +1232,7 @@ h2 {
     font-size: 17px;
     font-weight: 700;
     line-height: 23px;
+    word-spacing: 4px;
     text-transform: none;
     text-align: left;
     margin-bottom: 8px;
@@ -1220,6 +1245,10 @@ h2 {
 
 .order-card-checkbox {
     margin-bottom: 11px;
+}
+
+#order-card-checkbox-2 {
+    margin-bottom: 16px;
 }
 
 .order-card-checkbox input {
@@ -1259,7 +1288,12 @@ h2 {
 }
 
 #order-card-checkbox-1 {
-    margin-bottom: 8px;
+    margin-bottom: 14px;
+}
+
+#order-card-checkbox-audio-1,
+#order-card-checkbox-audio-2 {
+    margin-bottom: 7px;
 }
 
 #order-card-checkbox-1 label svg {
@@ -1287,11 +1321,7 @@ h2 {
 }
 
 .order-card-count-2 {
-    transform: translateY(-2px);
-}
-
-.order-minus {
-    margin-right: 7px;
+    transform: translateY(-5px);
 }
 
 .order-count {
@@ -1301,12 +1331,21 @@ h2 {
     font-size: 12px;
     font-weight: 700;
     line-height: 23px;
-    margin-right: 7px;
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.order-minus-container,
+.order-plus-container {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
 }
 
 .order-minus,
@@ -1314,7 +1353,6 @@ h2 {
     font-size: 17px;
     font-weight: 700;
     line-height: 23px;
-    cursor: pointer;
 }
 
 .order-total-sum p {

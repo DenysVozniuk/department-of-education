@@ -17,7 +17,7 @@ const Institutions = () => {
         {
             name: 'Євангельський Теологічний Університет',
             address: `Адреса: вул.${nonBreakingSpace}Голосіївська, 57, м.${nonBreakingSpace}Київ, 03039`,
-            href: '#',
+            href: 'https://www.evangeltu.org/',
             image: institutionImage2
         },
         {
@@ -29,31 +29,31 @@ const Institutions = () => {
         {
             name: 'Рівненська Духовна  Семінарія',
             address: `Адреса: вул.${nonBreakingSpace}Хліборобів, 2, м.${nonBreakingSpace}Рівне, 33028`,
-            href: '#',
+            href: 'https://www.rdsa.rv.ua/',
             image: institutionImage4
         },
         {
             name: 'Полтавська Богословська Семінарія',
             address: `Адреса: вул.${nonBreakingSpace}Б.${nonBreakingSpace}Хмельницького, 2а, м.${nonBreakingSpace}Полтава, 36004`,
-            href: '#',
+            href: 'https://seminary.ua/',
             image: institutionImage5
         },
         {
             name: 'Чернівецька Біблійна Семінарія',
             address: `Адреса: вул.${nonBreakingSpace}Червоноармійська, 246, м.${nonBreakingSpace}Чернівці, 58013`,
-            href: '#',
+            href: 'https://cbsem.com/',
             image: institutionImage6
         },
         {
             name: 'Тернопільська Біблійна Семінарія',
             address: `Адреса: вул.${nonBreakingSpace}Київська 10/143 м.${nonBreakingSpace}Тернопіль, 46023`,
-            href: '#',
+            href: 'https://www.tbsem.com/main.htm',
             image: institutionImage7
         },
         {
             name: 'Семінарія Практичного Богослів’я',
             address: `Адреса: вул.${nonBreakingSpace}Сосновського, 63в, м.${nonBreakingSpace}Коростень, 11500`,
-            href: '#',
+            href: 'http://korosten-bc.org.ua/',
             image: institutionImage8
         }
     ];

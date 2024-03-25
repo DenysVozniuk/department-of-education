@@ -1,15 +1,16 @@
-import React, {useState, useRef, useEffect} from "react";
+import React, {useState, useEffect} from "react";
 import useCollapsibleButtons from "../../Hooks/useCollapsibleButtons";
 import useCollapseButtonClick from "../../Hooks/useCollapseButtonClick";
 
 function CollapsibleButton(props) {
-    const { currentIndex, currentContentIndex, currentActiveState, activeStates, setActiveStates,
-         deepStatesArray, setCollapsibleText, text, card, setCollapsibleContentCard, cardInfo, additionalClass } = props;
+    const { currentIndex, currentContentIndex, currentActiveState, currentButton, activeStates, setActiveStates,
+         deepStatesArray, setCollapsibleText, text, card, setCollapsibleContentCard, cardInfo,
+         additionalClass, distanceFromAbove = null, setDistanceFromAbove = null } = props;
     const { toggleCollapsibleButton } = useCollapsibleButtons(activeStates, setActiveStates, setCollapsibleText, setCollapsibleContentCard);
     const [distance, setDistance] = useState(0);
     const [distanceTranslateY, setDistanceTranslateY] = useState(0);
-    const currentButton = useRef(null);
-    const { handlerCollapseButtonClick } = useCollapseButtonClick(currentButton.current, card, setDistance);
+    // const currentButton = useRef(null);
+    const { handlerCollapseButtonClick } = useCollapseButtonClick(currentButton.current, card, setDistanceFromAbove !==null ? setDistanceFromAbove : setDistance);
 
     useEffect(() => {
         const handleResize = () => {
@@ -18,7 +19,7 @@ function CollapsibleButton(props) {
                 setDistanceTranslateY(62);
             }
             else {
-                setDistanceTranslateY(32);
+                setDistanceTranslateY(42);
             }
         };
     
@@ -36,7 +37,7 @@ function CollapsibleButton(props) {
             index={currentIndex}
             className={`collapsible-btn${currentActiveState ? ' active' : ''} ${additionalClass}`}
             onClick={() => handlerCollapseButtonClick(toggleCollapsibleButton, currentActiveState, text, currentIndex, deepStatesArray, currentContentIndex, cardInfo)}
-            style={{transform: currentActiveState ? `translateY(${distance + distanceTranslateY}px)` : null}}
+            style={{transform: currentActiveState ? (`translateY(${distanceFromAbove !== null ? (distanceFromAbove + distanceTranslateY) : (distance + distanceTranslateY)}px)`) : null}}
             ref={currentButton}
         >
             <span></span>

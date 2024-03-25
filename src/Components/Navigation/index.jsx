@@ -1,11 +1,10 @@
 import React, {useContext} from "react";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Context from "../../Context";
 
 const Navigation = (props) => {
     const { navClassName, listClassName, itemClassName, linkClassName, isLastClassName = false } = props;
     const contextValue = useContext(Context);
-    //const navigate = useNavigate();
     const location = useLocation();
 
     const handlerClickOrder = () => {
@@ -15,6 +14,7 @@ const Navigation = (props) => {
     const handlerClickHome = (e, id) => {
         e.preventDefault();
         contextValue.setIsMobileMenuOpen(() => false);
+        document.querySelector('body').classList.contains('no-scroll') && (document.querySelector('body').classList.remove('no-scroll'));
         window.scroll({
             left: 0,
             top: id.offsetTop,

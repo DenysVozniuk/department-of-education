@@ -6,6 +6,7 @@ import CollapsibleButton from "../../../../CollapsibleButton"
 const AdmTeamCard = (props) => {
     const { currentIndex, currentContentIndex, card, setCollapsibleText, activeStates, setActiveStates, setCollapsibleContentCard } = props;
     const cardRef = useRef(null);
+    const currentButton = useRef(null);
 
     return (
         <div className="adm-card" ref={cardRef}>
@@ -22,6 +23,7 @@ const AdmTeamCard = (props) => {
                 currentIndex={currentIndex}
                 currentContentIndex={currentContentIndex}
                 currentActiveState={activeStates[currentIndex].activeState}
+                currentButton={currentButton}
                 activeStates={activeStates}
                 setActiveStates={setActiveStates}
                 deepStatesArray={2}

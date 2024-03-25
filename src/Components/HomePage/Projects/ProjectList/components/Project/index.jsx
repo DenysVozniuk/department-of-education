@@ -2,7 +2,7 @@ import React from "react";
 import { instagramLink, viberLink, telegramLink } from "../../../../../../img/Projects";
 
 const Project = (props) => {
-    const { index, img, text, href, isbutton, isSocialLinks } = props;
+    const { index, img, text, href, isButton = false, isSocialLinks = false, telegramHref = null, instagramHref = null, viberHref = null } = props;
     return (
         <div className="project-card">
             <div className="project-card-wrap">
@@ -11,14 +11,14 @@ const Project = (props) => {
                     {
                         isSocialLinks && (
                             <div className="project-links">
-                                <div className="project-link project-link-instagram"><a href="#">{instagramLink}</a></div>
-                                <div className="project-link project-link-viber"><a href="#">{viberLink}</a></div>
-                                <div className="project-link project-link-telegram"><a href="#">{telegramLink}</a></div>
+                                <div className="project-link project-link-instagram"><a href={instagramHref}>{instagramLink}</a></div>
+                                <div className="project-link project-link-viber"><a href={viberHref}>{viberLink}</a></div>
+                                <div className="project-link project-link-telegram"><a href={telegramHref}>{telegramLink}</a></div>
                             </div>
                         )
                     }
                     {
-                        isbutton && <a href={href}>Відкрити</a>
+                        isButton && <a href={href}>Відкрити</a>
                     }
                     
                 </div>

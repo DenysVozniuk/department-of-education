@@ -17,9 +17,12 @@ const OrderCard = (props) => {
         const handleResize = () => {
             const width = window.innerWidth;
             if (width >= 744) {
-                setOrderCardCountMarginBottom(9);
-            } else {
-                setOrderCardCountMarginBottom(5);
+                setOrderCardCountMarginBottom(10);
+            } else if (width >= 355){
+                setOrderCardCountMarginBottom(7);
+            }
+            else {
+                setOrderCardCountMarginBottom(18);
             }
         };
     
@@ -184,7 +187,7 @@ const OrderCard = (props) => {
                             </>
                         ) : (currentOrder.audioPrice ? (
                             <>
-                                <div id="order-card-checkbox-1" className="order-card-checkbox">
+                                <div id="order-card-checkbox-audio-1" className="order-card-checkbox">
                                     <input
                                         ref={bookPriceInput}
                                         type="checkbox"
@@ -193,7 +196,7 @@ const OrderCard = (props) => {
                                     />
                                     <label>{bookSvg}<span>{currentOrder.bookPrice} грн</span></label>
                                 </div>
-                                <div id="order-card-checkbox-2" className="order-card-checkbox">
+                                <div id="order-card-checkbox-audio-2" className="order-card-checkbox">
                                     <input
                                         ref={audioPriceInput}
                                         type="checkbox"
@@ -214,16 +217,24 @@ const OrderCard = (props) => {
             </div>
             <div className="order-card-counts">
                 <div className="order-card-count order-card-count-1" style={currentOrder.copybookPrice ? {marginBottom: `${orderCardCountMarginBottom}px`} : {}}>
-                    <span className="order-minus" onClick={() => handlerChangeCount(currentOrder.count, -1, 'book')}>-</span>
+                    <div className="order-minus-container" onClick={() => handlerChangeCount(currentOrder.count, -1, 'book')}>
+                        <span className="order-minus">-</span>
+                    </div>
                     <div className="order-count">{currentOrder.count}</div>
-                    <span className="order-plus" onClick={() => handlerChangeCount(currentOrder.count, 1, 'book')}>+</span>
+                    <div className="order-plus-container" onClick={() => handlerChangeCount(currentOrder.count, 1, 'book')}>
+                        <span className="order-plus">+</span>
+                    </div>
                 </div>
                 {
                     currentOrder.copybookPrice && (
                         <div className="order-card-count order-card-count-2">
-                            <span className="order-minus" onClick={() => handlerChangeCount(currentOrder.copybookCount, -1, 'copybook')}>-</span>
+                            <div className="order-minus-container" onClick={() => handlerChangeCount(currentOrder.copybookCount, -1, 'copybook')}>
+                                <span className="order-minus">-</span>
+                            </div>
                             <div className="order-count">{currentOrder.copybookCount}</div>
-                            <span className="order-plus" onClick={() => handlerChangeCount(currentOrder.copybookCount, 1, 'copybook')}>+</span>
+                            <div className="order-plus-container" onClick={() => handlerChangeCount(currentOrder.copybookCount, 1, 'copybook')}>
+                                <span className="order-plus">+</span>
+                            </div>
                         </div>
                     )
                 }

@@ -19,19 +19,19 @@ function AdmTeam() {
                 setDivideSize(3);
                 setAdmCard1WidthAndHeight(488);
                 setAdmCard1Transform('translateX(-134px) translateY(-88px)');
-                setAdmCard2WidthAndHeight(350);
-                setAdmCard2Transform('translateX(-61px) translateY(-50px)');
-                setAdmCard3WidthAndHeight(488);
-                setAdmCard3Transform('translateX(-134px) translateY(-88px)');
+                setAdmCard2WidthAndHeight(330);
+                setAdmCard2Transform('translateX(-51px) translateY(-43px)');
+                setAdmCard3WidthAndHeight(470);
+                setAdmCard3Transform('translateX(-129px) translateY(-78px)');
 
-            } else if (width >= 744) {
+            } else if (width >= 321) {
                 setDivideSize(1);
                 setAdmCard1WidthAndHeight(488);
                 setAdmCard1Transform('translateX(-134px) translateY(-88px)');
-                setAdmCard2WidthAndHeight(350);
-                setAdmCard2Transform('translateX(-61px) translateY(-50px)');
-                setAdmCard3WidthAndHeight(488);
-                setAdmCard3Transform('translateX(-134px) translateY(-88px)');
+                setAdmCard2WidthAndHeight(330);
+                setAdmCard2Transform('translateX(-51px) translateY(-43px)');
+                setAdmCard3WidthAndHeight(470);
+                setAdmCard3Transform('translateX(-129px) translateY(-78px)');
             }
             else {
                 setDivideSize(1);
@@ -84,7 +84,7 @@ function AdmTeam() {
                 transform: admCard3Transform
             },
             headingText: "Василь Попудник",
-            text: "заступник директора Департаменту освіти УЦХВЄ по проєкту \"Оновлення\"",
+            text: "заступник директора Департаменту освіти УЦХВЄ",
             collapsibleText: (<p>Народився 10 березня 1978 року в селі Волосянці Велико-Березнянського району Закарпатської області. З 1993 р. по 1997 р. навчався у Виноградівському політехнічному технікумі. Отримав диплом молодшого спеціаліста за спеціальністю «Будівництво, монтаж і експлуатація ліній електропередач».<br /><br />Водночас (з 1993 р. по 1996 р.) навчався у Львівському заочному біблійному інституті (пастирське відділення). Декілька років був керівником молоді та вів активну проповідницьку й музичну діяльність у своїй місцевості на Закарпатті.<br /><br />З 2000 р. по 2003 р. навчався у Львівській богословській семінарії. Ступінь бакалавра богослов’я. З 2005 року розпочав викладацьку діяльність. 2007-2010 рр. - навчання у Львівській богословській семінарії. Ступінь магістра богослов’я.<br /><br />З 2010 року початок праці в Департаменті освіти Української Церкви ХВЄ. На сьогодні заступник директора Департаменту освіти УЦХВЄ.<br /><br />У 2014-2018 рр. навчання в Чернівецькому національному університеті. Бакалавр. Правознавство. З 2014-2018 рр. – навчання у Львівській богословській семінарії в співпраці зі Слов’янським університетом штату Вашингтон. Ступінь доктора богослов’я.<br /><br />Проживає на Прикарпатті – у місті Івано-Франківську. Разом з дружиною Галиною виховали двох дітей: дочку Юлію та сина Юрія.</p>)
         }
     ];

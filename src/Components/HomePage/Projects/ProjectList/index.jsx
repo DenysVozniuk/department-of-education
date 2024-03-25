@@ -7,15 +7,26 @@ const ProjectList = (props) => {
         <div className="project-cards">
             {
                 projectList.map((value, index) => {
-                    return (
+                    return !value.isSocialLinks ? (
                         <Project
                             key={index}
                             index={index}
                             img={value.photo}
                             text={value.text}
                             href={value.href}
-                            isbutton={value.isbutton}
+                            isButton={value.isButton}
+                        />
+                    ) : (
+                        <Project
+                            key={index}
+                            index={index}
+                            img={value.photo}
+                            text={value.text}
+                            href={value.href}
                             isSocialLinks={value.isSocialLinks}
+                            telegramHref={value.telegramHref}
+                            instagramHref={value.instagramHref}
+                            viberHref={value.viberHref}
                         />
                     );
                 })

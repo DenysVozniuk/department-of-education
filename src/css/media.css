@@ -54,9 +54,9 @@
 
 @media (max-width: 1024px){
     h2 {
-        font-size: 25px;
+        font-size: 30px;
         font-weight: 800;
-        line-height: 31px;
+        line-height: 35px;
     }
     /* MOBILE MENU */
     .mobile-menu {
@@ -433,15 +433,15 @@
     }
 
     .project-card-head>a {
-        font-size: 10px;
+        font-size: 13px;
         padding: 0 8px;
         line-height: 25px;
-        left: calc((100% - 60.47px) / 2);
+        left: calc((100% - 73.81px) / 2);
     }
 
     .project-card-body p {
-        font-size: 13px;
-        line-height: 22px;
+        font-size: 15px;
+        line-height: 25px;
         font-weight: 600;
     }
 
@@ -466,7 +466,7 @@
     }
 
     .institution-container {
-        max-width: 616px;
+        max-width: 714px;
     }
 
     .institution-container h2 {
@@ -485,23 +485,23 @@
     }
 
     .institution-card-content h3 {
-        font-size: 13px;
-        line-height: 18px;
+        font-size: 16px;
+        line-height: 20px;
     }
 
     .institution-card-content p {
-        font-size: 10px;
-        line-height: 14px;
+        font-size: 15px;
+        line-height: 19px;
     }
 
     .institution-card-content a {
-        font-size: 10px;
+        font-size: 15px;
         line-height: 25px;
         padding: 5px 10px;
     }
 
     .institution-card-image {
-        max-width: 133px;
+        max-width: 150px;
         margin-right: 15px;
     }
 
@@ -542,24 +542,29 @@
     
     .order-page-container h1 {
         font-weight: 700;
-        font-size: 25px;
-        line-height: 31px;
+        font-size: 30px;
+        line-height: 35px;
         margin-bottom: 24px;
     }
 
     .order-page-head-content {
         font-weight: 600;
-        font-size: 13px;
+        font-size: 15px;
         line-height: 25px;
-        max-width: 245px;
+        max-width: 265px;
         margin-bottom: 53px;
     }
 
-    .order-body {
+    /* .order-body {
         margin-bottom: 69px;
+    } */
+
+    .order-body h2 {
+        font-size: 25px;
+        line-height: 31px;
     }
 
-    .order-body-background {
+    .order-form-background {
         width: 392px;
         height: 469px;
         margin-right: 17px;
@@ -571,10 +576,10 @@
         line-height: 18px;
     }
 
-    .order-form button {
+    /* .order-form button {
         right: calc((100% - 231.6px) / 2);
         bottom: 60px;
-    }
+    } */
 
     .order-cards {
         align-items: center;
@@ -582,14 +587,10 @@
 }
 
 @media (max-width: 743px){
-    h2 {
-        font-size: 22px;
-        line-height: 27px;
-    }
-
     /* HEADER */
     .header-container {
-        max-width: 375px;
+        /* max-width: 375px; */
+        max-width: 100%;
         box-sizing: border-box;
     }
 
@@ -736,13 +737,13 @@
         margin-bottom: 6px;
     }
 
-    .about-us-content {
+    /* .about-us-content {
         max-width: 258px;
-    }
+    } */
 
     .about-us-text {
-        font-size: 13px;
-        line-height: 25px;
+        font-size: 15px;
+        line-height: 28px;
     }
 
     /* ADMINISTRATION TEAM */
@@ -755,37 +756,37 @@
         margin-bottom: 49px;
     }
 
-    .adm-card {
+    /* .adm-card {
         max-width: 150px;
-    }
+    } */
 
-    .adm-image-container {
+    /* .adm-image-container {
         max-width: 117px;
         height: 121px;
-    }
+    } */
 
-    .adm-image {
+    /* .adm-image {
         width: 117px;
         height: 117px;
-    }
+    } */
 
     .adm-card-content {
         margin-bottom: 5px;
     }
 
     .adm-card h3 {
-        font-size: 13px;
+        /* font-size: 13px; */
         font-weight: 600;
-        line-height: 18px;
+        /* line-height: 18px; */
     }
 
     .adm-card p {
-        font-size: 10px;
-        line-height: 12px;
+        /* font-size: 10px;
+        line-height: 12px; */
         font-weight: 600;
     }
 
-    .collapsible-btn {
+    /* .collapsible-btn {
         width: 20px;
         height: 20px;
     }
@@ -809,7 +810,7 @@
 
     .collapsible-btn.active span::after {
         transform: translateX(1.5px) rotateZ(45deg);
-    }
+    } */
 
     .adm-content {
         padding: 35px 35px 43px;
@@ -817,8 +818,8 @@
 
     .adm-content p {
         font-weight: 600;
-        font-size: 13px;
-        line-height: 25px;
+        /* font-size: 13px;
+        line-height: 25px; */
     }
 
     /* BOOKS */
@@ -836,31 +837,32 @@
 
     .books-cards {
         row-gap: 42px;
+        align-items: center;
     }
 
     .book-card-block {
         margin-bottom: 6px;
+        justify-content: center;
     }
 
     .book-card {
-        max-width: 143px;
+        max-width: 255px;
         justify-content: flex-start;
     }
 
     .book-card-img-container {
-        width: 82px;
-        height: 109px;
+        width: 190px;
+        height: 254.6px;
     }
 
     .book-card h3 {
-        font-size: 13px;
-        line-height: 18px;
+        font-size: 16px;
+        line-height: 23px;
         margin-bottom: 6px;
     }
 
     .book-card-info {
-        padding: 8px 7px;
-        margin-bottom: 3px;
+        padding: 10px 7px;
     }
 
     .book-card-price,
@@ -868,16 +870,39 @@
     .book-card-info-text-1,
     .book-card-info-text-2,
     .book-card-info-text-3 {
-        column-gap: 3px;
+        column-gap: 5px;
     }
 
     .book-card-price svg {
-        max-width: 7px;
-        max-height: 9px;
+        max-width: 18px;
+        max-height: 20px;
+    }
+
+    .audio-book-card-price svg,
+    .book-card-info-text-3 svg {
+        max-width: 18px;
+        max-height: 18px;
+    }
+
+    .audio-book-card-price div svg {
+        transform: translateY(0px);
+    }
+
+    .audio-book-card-price div,
+    .audio-book-card-price div svg,
+    .book-card-info-text-3 div,
+    .book-card-info-text-3 div svg {
+        max-width: 19px;
+        max-height: 19px;
+    }
+
+    .book-card-info-text-3 div {
+        transform: translateY(0px);
     }
 
     .book-card-text {
-        font-size: 10px;
+        font-size: 16px;
+        line-height: 23px;
     }
 
     .book-card-buy-buttons {
@@ -885,7 +910,7 @@
     }
 
     .book-card-buy-button {
-        padding: 8px;
+        padding: 15px 5px;
     }
 
     .book-card-details-button {
@@ -898,7 +923,17 @@
     }
 
     .book-collapsible-content p {
-        font-size: 10px;
+        font-size: 13px;
+        line-height: 25px;
+    }
+
+    .book-card-info-text-1 svg {
+        max-width: 18px;
+        max-height: 20px;
+    }
+
+    .book-collapsible-content .book-card-info p {
+        font-size: 13px;
         line-height: 18px;
     }
 
@@ -913,7 +948,7 @@
     }
 
     .project-cards {
-        grid-template-columns: repeat(1, minmax(244px, 244px));
+        grid-template-columns: repeat(1, minmax(244px, 280px));
         justify-content: center;
         row-gap: 24px;
     }
@@ -925,7 +960,7 @@
     }
 
     .institution-cards {
-        grid-template-columns: repeat(1, minmax(281px, 281px));
+        grid-template-columns: repeat(1, minmax(281px, 320px));
         justify-content: center;
     }
 
@@ -938,21 +973,29 @@
         padding-top: 63px;
     }
 
-    .order-page-container h1 {
+    .order-body h2 {
+        transform: translateY(20px);
+    }
+
+    /* .order-page-container h1 {
         font-size: 22px;
         line-height: 27px;
         margin-bottom: 11px;
-    }
+    } */
 
-    .order-page-head-content {
+    /* .order-page-head-content {
         margin-bottom: 5px;
-    }
+    } */
 
-    .order-body {
+    .order-form-body {
         flex-direction: column;
     }
 
-    .order-body-background {
+    /* .order-cards {
+        margin-bottom: 10px;
+    } */
+
+    .order-form-background {
         width: 240px;
         height: 283px;
         margin-right: 0;
@@ -991,10 +1034,10 @@
         line-height: 18px;
     }
 
-    .order-count {
+    /* .order-count {
         width: 22px;
         height: 22px;
-    }
+    } */
 
     .order-delete-btn {
         font-weight: 600;
@@ -1008,12 +1051,29 @@
     }
 }
 
+@media (max-width: 354px){
+    .order-count,
+    .order-minus-container,
+    .order-plus-container {
+        width: 20px;
+        height: 20px;
+    }
+
+    .order-card-content h2,
+    .order-card-checkbox span,
+    .order-card-checkbox label span,
+    .order-delete-btn {
+        font-size: 11px;
+        line-height: 15px;
+    }
+}
+
 @media (max-width: 320px){
-    .books-cards {
+    /* .books-cards {
         align-items: center;
     }
 
     .book-card-block {
         justify-content: center;
-    }
+    } */
 }

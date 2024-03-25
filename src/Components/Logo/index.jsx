@@ -4,12 +4,14 @@ import { logo } from "../../img/Logo";
 
 const Logo = () => {
     return (
-        <div className="logo">
-            <div>
-                <Link to="/">{logo}</Link>
+        <Link to="/">
+            <div className="logo">
+                <div>
+                    {logo}
+                </div>
+                <p>Департамент освіти УЦХВЄ</p>
             </div>
-            <p>Департамент освіти УЦХВЄ</p>
-        </div>
+        </Link>
     );
 }
 

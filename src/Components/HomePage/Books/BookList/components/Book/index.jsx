@@ -5,6 +5,9 @@ import { bookSvg, audioSvg, UkraineSvg } from "../../../../../../img/Books";
 import ResizeObserver from 'resize-observer-polyfill';
 import CollapsibleButton from "../../../../../CollapsibleButton";
 import useOrdersTotalSum from "../../../../../../Hooks/useOrdersTotalSum";
+import useCollapsibleButtons from "../../../../../../Hooks/useCollapsibleButtons";
+import useCollapseButtonClick from "../../../../../../Hooks/useCollapseButtonClick";
+
 
 const Book = (props) => {
     const { currentIndex, currentContentIndex, card, setCollapsibleText, activeStates, setActiveStates, setCollapsibleContentCard } = props;
@@ -18,7 +21,13 @@ const Book = (props) => {
     const [additionalMarginsForHr, setAdditionalMarginsForHr] = useState(0);
     const { calculateTotalSum } = useOrdersTotalSum();
     const [marginRightBookPrice, setMarginRightBookPrice] = useState(0);
-    //const [isAudio, setIsAudio] = useState(false);
+
+    const [distance, setDistance] = useState(1);
+    const currentButton = useRef(null);
+    const { toggleCollapsibleButton } = useCollapsibleButtons(activeStates, setActiveStates, setCollapsibleText, setCollapsibleContentCard);
+    const { handlerCollapseButtonClick } = useCollapseButtonClick(currentButton.current, cardRef.current, setDistance);
+
+
 
     useLayoutEffect(() => {
         const observeElement = (element, setSize, option) => {
@@ -136,7 +145,10 @@ const Book = (props) => {
     return (
         <div ref={cardRef} className="book-card">
             <div className="d-flex flex-column justify-space-between align-items-center flex-1">
-                <div className="book-card-img-container">
+                <div
+                    className="book-card-img-container"
+                    onClick={() => handlerCollapseButtonClick(toggleCollapsibleButton, activeStates[currentIndex].activeState, card.collapsibleContent, currentIndex, 2, currentContentIndex, card)}
+                >
                     <img className="book-card-img" src={card.image} alt="book" />
                 </div>
                 <h3 className="book-card-text">{card.title}</h3>
@@ -179,11 +191,18 @@ const Book = (props) => {
                 <Link to="/order" className="book-card-buy-button book-card-buy-button-2 book-card-text" onClick={() => handlerAddOrderToCart()}>Замовити</Link>
             </div>
             <div className="book-card-details-button">
-                <p style={{color: '#9A9A9A'}} className="book-card-text">Детальніше</p>
+                <p
+                    style={{color: '#9A9A9A', cursor: 'pointer'}}
+                    className="book-card-text"
+                    onClick={() => handlerCollapseButtonClick(toggleCollapsibleButton, activeStates[currentIndex].activeState, card.collapsibleContent, currentIndex, 2, currentContentIndex, card)}
+                >
+                    Детальніше
+                </p>
                 <CollapsibleButton
                     currentIndex={currentIndex}
                     currentContentIndex={currentContentIndex}
                     currentActiveState={activeStates[currentIndex].activeState}
+                    currentButton={currentButton}
                     activeStates={activeStates}
                     setActiveStates={setActiveStates}
                     deepStatesArray={2}
@@ -193,6 +212,8 @@ const Book = (props) => {
                     setCollapsibleContentCard={setCollapsibleContentCard}
                     cardInfo={card}
                     additionalClass={'book-collapsible-btn'}
+                    distanceFromAbove={distance}
+                    setDistanceFromAbove={setDistance}
                 />
             </div>
         </div>

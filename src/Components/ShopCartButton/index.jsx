@@ -12,13 +12,13 @@ const ShopCartButton = () => {
                 (
                 <div className="shop-cart-container">
                     <Link to="/order">
-                    <div className="shop-cart-button">
-                        <div className="shop-cart-icon">
-                        {shopCartIcon}
-                        <div id="shop-cart-icon-count">{contextValue.cartCount}</div>
+                        <div className="shop-cart-button">
+                            <div className="shop-cart-icon">
+                                {shopCartIcon}
+                                <div id="shop-cart-icon-count">{contextValue.cartCount}</div>
+                            </div>
+                            кошик
                         </div>
-                        кошик
-                    </div>
                     </Link>
                 </div>
                 )

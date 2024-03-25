@@ -13,7 +13,7 @@ const Books = () => {
             const width = window.innerWidth;
             if (width >= 1025) {
                 setDivideSize(3);
-            } else if (width >= 321){
+            } else if (width >= 744){
                 setDivideSize(2);
             } else {
                 setDivideSize(1);
