@@ -5,7 +5,7 @@ const OrderForm = () => {
     const contextValue = useContext(Context);
     const formData = [
         {
-            labelName: '1. Ваше прізвище та ім\'я:',
+            labelName: '1. Ваше прізвище та ім\'я',
             inputName: 'name',
             isRequired: true
         },
@@ -15,7 +15,7 @@ const OrderForm = () => {
             isRequired: true
         },
         {
-            labelName: '3. Адреса відправлення',
+            labelName: '3. Адреса відправлення (НП)',
             inputName: 'address',
             isRequired: true
         },
@@ -94,7 +94,9 @@ const OrderForm = () => {
             // console.log(JSON.stringify(dataToServer));
             // return;
     
-            fetch("http://department-osvitu", {
+            //const serverPath = "http://department-osvitu";
+            const serverPath = "https://chveu-osvita.org.ua/Server/index.php";
+            fetch(serverPath, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -110,16 +112,16 @@ const OrderForm = () => {
             .then(response => {
                 console.log(response);
                 if(response === "Success"){
-                    // setFormInputValueState(formData.map((v) => {
-                    //     return {
-                    //         ...v,
-                    //         value: ''
-                    //     }
-                    // }));
-                    // contextValue.setOrderList([]);
-                    // contextValue.setTotalSum(null);
-                    // contextValue.setCartCount(null);
-                    // localStorage.clear();
+                    setFormInputValueState(formData.map((v) => {
+                        return {
+                            ...v,
+                            value: ''
+                        }
+                    }));
+                    contextValue.setOrderList([]);
+                    contextValue.setTotalSum(null);
+                    contextValue.setCartCount(null);
+                    localStorage.clear();
                     alert("Ваше замовлення успішно відправилося");
                 }
                 else {

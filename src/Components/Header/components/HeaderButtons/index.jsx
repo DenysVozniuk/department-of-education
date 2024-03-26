@@ -29,7 +29,7 @@ const HeaderButtons = () => {
     return (
         <div className="header-buttons">
             <div className="header-social-buttons-links" style={{marginRight: '40px'}}>
-                <SocialLinks isTelegram={false} />
+                <SocialLinks isTelegram={false} isYouTube={false} />
             </div>
             <div ref={buttonRef} className="header-buttons-language" onClick={handlerClick}>
                 <div className="header-buttons-language-icon">{uaLanguage}</div>

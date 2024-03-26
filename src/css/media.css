@@ -43,7 +43,7 @@
     }
 
     .footer-email-wrap,
-    .footer-phone-wrap {
+    .footer-site-wrap {
         margin-right: 4px;
     }
 
@@ -202,7 +202,7 @@
 
     /* FOOTER */
     .footer-body-wrap {
-        max-width: 586px;
+        max-width: 680px;
         width: 100%;
         margin: 0 auto;
     }
@@ -225,8 +225,30 @@
         font-size: 13px;
     }
 
-    .social-buttons-link.telegram, .social-buttons-link.instagram {
+    .social-buttons-link.youtube,
+    .social-buttons-link.telegram,
+    .social-buttons-link.instagram {
         margin-right: 20px;
+    }
+
+    /* MAIN SCREEN */
+    .main-screen-cards {
+        flex-direction: column;
+        row-gap: 40px;
+    }
+
+    .main-screen-card {
+        max-width: 255px;
+        row-gap: 7px;
+    }
+
+    .main-screen-card:first-child {
+        margin-right: 0;
+    }
+
+    .main-screen-card a {
+        font-size: 15px;
+        line-height: 35px;
     }
 
     /* ABOUT-US */
@@ -615,8 +637,8 @@
     /* FOOTER */
     .footer-body-wrap {
         display: grid;
-        max-width: 345px;
-        grid-template-columns: 175px 112px;
+        max-width: 380px;
+        grid-template-columns: 174.73px 140px;
         row-gap: 5px;
     }
 
@@ -629,7 +651,7 @@
         order: 2;
     }
 
-    .footer-email-wrap, .footer-phone-wrap {
+    .footer-email-wrap, .footer-site-wrap {
         margin-right: 3.5px;
     }
 
@@ -644,14 +666,14 @@
         order: 3;
     }
 
-    .footer-phone-wrap,
-    .footer-phone-wrap div,
-    .footer-phone-wrap div svg {
+    .footer-site-wrap,
+    .footer-site-wrap div,
+    .footer-site-wrap div svg {
         max-width: 10.5px;
         height: 23px;
     }
 
-    .footer-phone-wrap div svg {
+    .footer-site-wrap div svg {
         max-height: 13px;
     }
 
@@ -660,8 +682,10 @@
         justify-content: start;
     }
 
-    .social-buttons-link.telegram, .social-buttons-link.instagram {
-        margin-right: 26px;
+    .social-buttons-link.youtube,
+    .social-buttons-link.telegram,
+    .social-buttons-link.instagram {
+        margin-right: 20px;
     }
 
     /* MAIN SCREEN */
@@ -847,6 +871,7 @@
 
     .book-card {
         max-width: 255px;
+        width: 255px;
         justify-content: flex-start;
     }
 
@@ -1051,6 +1076,13 @@
     }
 }
 
+@media (max-width: 395px){
+    .main-screen-content h2 {
+        font-size: 20px;
+        line-height: 35px;
+    }
+}
+
 @media (max-width: 354px){
     .order-count,
     .order-minus-container,
@@ -1065,6 +1097,15 @@
     .order-delete-btn {
         font-size: 11px;
         line-height: 15px;
+    }
+}
+
+@media (max-width: 345px){
+    .footer-body-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
     }
 }
 

@@ -140,7 +140,9 @@ body.no-scroll {
     max-height: 19px;
 }
 
-.social-buttons-link.telegram, .social-buttons-link.instagram {
+.social-buttons-link.youtube,
+.social-buttons-link.telegram,
+.social-buttons-link.instagram {
     margin-right: 21px;
 }
 
@@ -366,6 +368,7 @@ body.no-scroll {
 
 .footer-body-wrap-logo {
     display: flex;
+    align-items: center;
     margin-right: 10px;
 }
 
@@ -397,15 +400,20 @@ body.no-scroll {
     max-height: 24px;
 }
 
-.footer-phone-wrap {
-    width: 13px;
-    height: 21px;
+.footer-site-wrap {
+    width: 28px;
+    height: 28px;
     margin-right: 11px;
 }
 
-.footer-phone-wrap div {
-    max-width: 13px;
-    max-height: 21px;
+.footer-site-wrap div {
+    max-width: 28px;
+    max-height: 28px;
+}
+
+.footer-site-wrap div svg {
+    max-width: inherit;
+    max-height: inherit;
 }
 
 .footer-text {
@@ -444,7 +452,7 @@ body.no-scroll {
 /* MAIN SCREEN */
 .main-screen {
     /* background-image: url('../img/Main-screen/background.webp'); */
-    background-color: #ACCEE8;
+    background-color: rgb(193, 204, 214);
     height: 778px;
     position: relative;
     /* background-position: center;
@@ -452,13 +460,69 @@ body.no-scroll {
     background-size: cover; */
 }
 
-.main-screen-content {
+/* .main-screen-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 227px;
     max-width: max-content;
     margin: 0 auto;
+} */
+
+.main-screen-content {
+    padding-top: 134px;
+    max-width: 881px;
+    margin: 0 auto;
+}
+
+.main-screen-content h2 {
+    margin-bottom: 20px;
+    font-size: 26.91px;
+    font-weight: 700;
+    line-height: 53.5px;
+}
+
+.main-screen-cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-screen-card {
+    max-width: 418px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+}
+
+.main-screen-card-img,
+.main-screen-card-img img {
+    max-width: inherit;
+    height: auto;
+}
+
+.main-screen-card-img img {
+    border-radius: 42px;
+}
+
+.main-screen-card:first-child {
+    margin-right: 10px;
+}
+
+.main-screen-card a {
+    color: #000;
+    background-color: rgb(230, 236, 242);
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 50px;
+    padding: 0 27px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.main-screen-card a:hover {
+    transform: scale(1.04);
 }
 
 .main-screen-logo-container {

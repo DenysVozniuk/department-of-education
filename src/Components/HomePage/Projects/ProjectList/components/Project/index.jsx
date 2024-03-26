@@ -18,7 +18,7 @@ const Project = (props) => {
                         )
                     }
                     {
-                        isButton && <a href={href}>Відкрити</a>
+                        isButton && <a target="_blank" rel='noreferrer' href={href}>Відкрити</a>
                     }
                     
                 </div>

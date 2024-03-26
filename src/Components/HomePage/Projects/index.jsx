@@ -1,7 +1,7 @@
 import React, {useContext} from "react";
 import Context from "../../../Context";
 import ProjectList from "./ProjectList";
-import { projectPhoto1, projectPhoto2, projectPhoto3, projectPhoto4, projectPhoto5, projectPhoto6, projectPhoto7 } from "../../../img/Projects";
+import { projectPhoto1, projectPhoto2, projectPhoto3, projectPhoto4, projectPhoto5, projectPhoto6, projectPhoto7, projectPhoto8 } from "../../../img/Projects";
 
 
 const Projects = () => {
@@ -9,7 +9,7 @@ const Projects = () => {
     const projectList = [
         {
             photo: projectPhoto1,
-            text: 'Навчальна платформа, де розміщені відеокурси на різні теми разом з додатковими матеріалами, які стануть у нагоді для якісного християнського навчання.',
+            text: 'Навчальна платформа, де розміщуються відеокурси на різні теми разом з додатковими матеріалами, які стануть у нагоді для якісного християнського навчання. Це чудова нагода розвиватися, незалежно від свого місцезнаходження.',
             href: 'https://onovlennia.com.ua/',
             isButton: true,
             isSocialLinks: false,
@@ -29,7 +29,7 @@ const Projects = () => {
         },
         {
             photo: projectPhoto3,
-            text: 'Започаткований 24 лютого 2022-ого року. Про те, що болить, і про Того, хто допомагає проходити цей біль. Кожен новий випуск - щотижня.',
+            text: 'Започаткований 24 лютого 2022-ого року. Про те, що болить, і про Того, хто допомагає проходити цей біль. Кожен новий випуск – раз на два тижні.',
             href: 'https://www.youtube.com/watch?v=9rnsRjDf2-g&list=PLbikoj5UiVGMlPQ5u8PWpwb3PVISK-fZV',
             isButton: true,
             isSocialLinks: false,
@@ -59,7 +59,7 @@ const Projects = () => {
         },
         {
             photo: projectPhoto6,
-            text: 'Навчальний відеокурс з книгою та зошитом, що спрямований на підготовку служителів-наставників, які готують новонавернених до водного хрещення.',
+            text: 'Навчальний відеокурс на основі книги для кожного, хто готує та готується до водного хрещення.',
             href: 'https://onovlennia.com.ua/courses/viruyu-obitsyayu/',
             isButton: true,
             isSocialLinks: false,
@@ -69,8 +69,18 @@ const Projects = () => {
         },
         {
             photo: projectPhoto7,
-            text: 'Створено для збереження інформації та висвітлення діяльності місцевих церков, особливо в час війни. Повідомте нам, якщо ваша церква хотіла б взяти участь у цьому проєкті.',
+            text: 'Створено для збереження інформації та висвітлення діяльності місцевих церков, особливо в час війни. Наразі діяльність проєкту призупинена.',
             href: 'https://www.youtube.com/watch?v=0xMDHf8J9t8&t=3s',
+            isButton: true,
+            isSocialLinks: false,
+            telegramHref: null,
+            instagramHref: null,
+            viberHref: null
+        },
+        {
+            photo: projectPhoto8,
+            text: 'Серія прямих ефірів на дискусійні теми у християнському контексті, завдання яких - спонукати глядача до роздумів та дослідження Слова Божого.',
+            href: 'https://www.youtube.com/watch?v=J1wgor6njts&list=PLbikoj5UiVGPZVjC7x2zEri1kOC7hgdZE',
             isButton: true,
             isSocialLinks: false,
             telegramHref: null,
