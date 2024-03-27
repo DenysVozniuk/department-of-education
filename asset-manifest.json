@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/department-of-education/static/css/main.34de8868.css",
-    "main.js": "/department-of-education/static/js/main.abc24b7c.js",
-    "static/js/787.28cb0dcd.chunk.js": "/department-of-education/static/js/787.28cb0dcd.chunk.js",
+    "main.css": "/department-of-education/static/css/main.59747c56.css",
+    "main.js": "/department-of-education/static/js/main.cf14140a.js",
+    "static/js/787.e073d407.chunk.js": "/department-of-education/static/js/787.e073d407.chunk.js",
     "static/media/Background.webp": "/department-of-education/static/media/Background.aa100ac97e8274c81e5c.webp",
     "static/media/Adm-photo-2.png": "/department-of-education/static/media/Adm-photo-2.9212fc2dbfb8dfe46b62.png",
+    "static/media/Book-16.png": "/department-of-education/static/media/Book-16.acd65f8031c3c3300d25.png",
     "static/media/Adm-photo-1.png": "/department-of-education/static/media/Adm-photo-1.58b141b5ad6afc16d05c.png",
     "static/media/Book-5.png": "/department-of-education/static/media/Book-5.34cdee49277a9fd63e19.png",
     "static/media/Book-6.png": "/department-of-education/static/media/Book-6.e8a0f606017d7f35be74.png",
@@ -24,8 +25,8 @@
     "static/media/Book-13.png": "/department-of-education/static/media/Book-13.a8bcc8b3443181df8709.png",
     "static/media/Book-14.png": "/department-of-education/static/media/Book-14.de0ea00de18c772f447f.png",
     "static/media/Book-7.png": "/department-of-education/static/media/Book-7.3727bcb43c3b254be25a.png",
-    "static/media/Project-4.png": "/department-of-education/static/media/Project-4.e0879596dd2baac84ecf.png",
     "static/media/Project-3.png": "/department-of-education/static/media/Project-3.50401c3b109a91a2ad23.png",
+    "static/media/UPC.svg": "/department-of-education/static/media/UPC.941079ca9f1ee152d2b0fed823eda273.svg",
     "static/media/Project-2.png": "/department-of-education/static/media/Project-2.35541105a7df16930e5c.png",
     "static/media/Order-image.png": "/department-of-education/static/media/Order-image.53c8097248070b103067.png",
     "static/media/Institution-6.png": "/department-of-education/static/media/Institution-6.56b33dc87331b0c645f3.png",
@@ -45,6 +46,7 @@
     "static/media/Project-6.png": "/department-of-education/static/media/Project-6.8053605e6cecb1322d64.png",
     "static/media/Institution-5.png": "/department-of-education/static/media/Institution-5.5bdce8f5848d70809a25.png",
     "static/media/Institution-3.png": "/department-of-education/static/media/Institution-3.a32eaa1c91058fa425f7.png",
+    "static/media/Project-8.png": "/department-of-education/static/media/Project-8.32bf14ef9012b7ad6bd9.png",
     "static/media/logo.webp": "/department-of-education/static/media/logo.2ccc799161c7ca645400.webp",
     "static/media/Viber.svg": "/department-of-education/static/media/Viber.c4130512b25ade1b67a2dcf30dbf1a5d.svg",
     "static/media/Instagram.svg": "/department-of-education/static/media/Instagram.d0957cb8b096fb6bc8b571b78dba83b6.svg",
@@ -59,12 +61,13 @@
     "static/media/email.svg": "/department-of-education/static/media/email.d4b0b59d8e2183a4a281267103fd79d4.svg",
     "static/media/dollar-icon.svg": "/department-of-education/static/media/dollar-icon.04cc2a8c8a151d148bb4088f8ae3a2a4.svg",
     "static/media/wave.svg": "/department-of-education/static/media/wave.a3dad58337c9b3b330e5d15602c2fdd9.svg",
-    "main.34de8868.css.map": "/department-of-education/static/css/main.34de8868.css.map",
-    "main.abc24b7c.js.map": "/department-of-education/static/js/main.abc24b7c.js.map",
-    "787.28cb0dcd.chunk.js.map": "/department-of-education/static/js/787.28cb0dcd.chunk.js.map"
+    "static/media/YouTube.svg": "/department-of-education/static/media/YouTube.738d397089441200e357f391e6a9d363.svg",
+    "main.59747c56.css.map": "/department-of-education/static/css/main.59747c56.css.map",
+    "main.cf14140a.js.map": "/department-of-education/static/js/main.cf14140a.js.map",
+    "787.e073d407.chunk.js.map": "/department-of-education/static/js/787.e073d407.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.34de8868.css",
-    "static/js/main.abc24b7c.js"
+    "static/css/main.59747c56.css",
+    "static/js/main.cf14140a.js"
   ]
 }
