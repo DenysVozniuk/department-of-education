@@ -7,8 +7,9 @@ const Navigation = (props) => {
     const contextValue = useContext(Context);
     const location = useLocation();
 
-    const handlerClickOrder = () => {
+    const handlerClickOrder = (currentLink) => {
         contextValue.setIsMobileMenuOpen(() => false);
+        contextValue.setAnchorLink(() => currentLink);
     }
 
     const handlerClickHome = (e, id) => {
@@ -26,19 +27,19 @@ const Navigation = (props) => {
         <nav className={navClassName}>
             <ul className={listClassName}>
                 <li className={itemClassName}>
-                    <Link to="/" className={linkClassName} onClick={!location.pathname.includes('order') ? (e) => handlerClickHome(e, contextValue.aboutUsSection.current) : () => handlerClickOrder()}>Про нас</Link>
+                    <Link to="/" className={linkClassName} onClick={!location.pathname.includes('order') ? (e) => handlerClickHome(e, contextValue.aboutUsSection.current) : () => handlerClickOrder("about-us")}>Про нас</Link>
                 </li>
                 <li className={itemClassName}>
-                    <Link to="/" className={linkClassName} onClick={!location.pathname.includes('order') ? (e) => handlerClickHome(e, contextValue.booksSection.current) : () => handlerClickOrder()}>Книги</Link>
+                    <Link to="/" className={linkClassName} onClick={!location.pathname.includes('order') ? (e) => handlerClickHome(e, contextValue.booksSection.current) : () => handlerClickOrder("books")}>Книги</Link>
                 </li>
                 <li className={itemClassName}>
-                    <Link to="/" className={linkClassName} onClick={!location.pathname.includes('order') ? (e) => handlerClickHome(e, contextValue.projectsSection.current) : () => handlerClickOrder()}>Проєкти</Link>
+                    <Link to="/" className={linkClassName} onClick={!location.pathname.includes('order') ? (e) => handlerClickHome(e, contextValue.projectsSection.current) : () => handlerClickOrder("projects")}>Проєкти</Link>
                 </li>
                 <li className={itemClassName}>
-                    <Link to="/" className={linkClassName} onClick={!location.pathname.includes('order') ? (e) => handlerClickHome(e, contextValue.institutionsSection.current) : () => handlerClickOrder()}>Навчальні заклади</Link>
+                    <Link to="/" className={linkClassName} onClick={!location.pathname.includes('order') ? (e) => handlerClickHome(e, contextValue.institutionsSection.current) : () => handlerClickOrder("institutions")}>Навчальні заклади</Link>
                 </li>
                 <li className={itemClassName}>
-                    <Link to="/" className={`${linkClassName}${isLastClassName ? " last" : ""}`} onClick={!location.pathname.includes('order') ? (e) => handlerClickHome(e, contextValue.contactsSection.current) : () => handlerClickOrder()}>Контакти</Link>
+                    <Link to="/" className={`${linkClassName}${isLastClassName ? " last" : ""}`} onClick={!location.pathname.includes('order') ? (e) => handlerClickHome(e, contextValue.contactsSection.current) : () => handlerClickOrder("contacts")}>Контакти</Link>
                 </li>
             </ul>
         </nav>

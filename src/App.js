@@ -21,8 +21,7 @@ function App() {
   const projectsSection = useRef(null);
   const institutionsSection = useRef(null);
   const contactsSection = useRef(null);
-  const mainContent = useRef(null);
-  const wrap = useRef(null);
+  const [anchorLink, setAnchorLink] = useState(null);
 
   const handlerShowLanguageButton = () => {
     setIsShowLanguageButton((prevState) => !prevState);
@@ -48,30 +47,11 @@ function App() {
   }, []);
 
   useEffect(() => {
-    // isMobileMenuButtonActive ? (
-    //   document.querySelector('body').setAttribute('style', 'overflow-y: hidden')
-    // ) : (
-    //   document.querySelector('body').setAttribute('style', '')
-    // );
     if(isMobileMenuButtonActive) {
       !document.querySelector('body').classList.contains('no-scroll') && (document.querySelector('body').classList.add('no-scroll'));
-      // if(wrap){
-      //   wrap.current.classList.add('no-scroll');
-      //   if (mainContent) {
-      //     mainContent.current.classList.add('no-scroll');
-      //   }  
-      // }
      } else {
       document.querySelector('body').classList.contains('no-scroll') && (document.querySelector('body').classList.remove('no-scroll'));
-      // if(wrap){
-      //   wrap.current.classList.remove('no-scroll');
-      //   if(mainContent){
-      //     mainContent.current.classList.remove('no-scroll');
-      //   }  
-      // }
      }
-      //document.querySelector('body').classList.remove('no-scroll')
-      //
   }, [isMobileMenuButtonActive]);
 
   useEffect(() => {
@@ -101,19 +81,21 @@ function App() {
     booksSection,
     projectsSection,
     institutionsSection,
-    contactsSection
+    contactsSection,
+    anchorLink,
+    setAnchorLink
   };
   return (
     <Router>
       <Context.Provider value={value}>
-        <div ref={wrap} className="wrap">
+        <div className="wrap">
           <Header />
           {
             isScreenWidthLess1025 && (
               isMobileMenuButtonActive && <MobileMenu />
             )
           }
-          <div ref={mainContent} className="main-content">
+          <div className="main-content">
             <Routes>
               <Route path='/' element={<Home title={"Департамент освіти УЦХВЄ"} />} />
               <Route path='/order' element={<Order title={"Департамент освіти УЦХВЄ - Замовлення книг"} />} />

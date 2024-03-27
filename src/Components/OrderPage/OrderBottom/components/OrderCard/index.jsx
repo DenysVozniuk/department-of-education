@@ -208,12 +208,12 @@ const OrderCard = (props) => {
                             </>
                         ) : (
                             <div className="order-card-checkbox">
-                                {bookSvg}<span>{currentOrder.bookPrice}грн</span>
+                                {bookSvg}<span>{currentOrder.bookPrice} грн</span>
                             </div>
                         ))
                     }
                 </div>
-                <button className="order-delete-btn" onClick={() => handlerDeleteOrder(id)}>видалити замовлення</button>
+                <button className="order-delete-btn" onClick={() => handlerDeleteOrder(id)} translate="no">видалити замовлення</button>
             </div>
             <div className="order-card-counts">
                 <div className="order-card-count order-card-count-1" style={currentOrder.copybookPrice ? {marginBottom: `${orderCardCountMarginBottom}px`} : {}}>

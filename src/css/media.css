@@ -638,7 +638,7 @@
     .footer-body-wrap {
         display: grid;
         max-width: 380px;
-        grid-template-columns: 174.73px 140px;
+        grid-template-columns: 175px 140px;
         row-gap: 5px;
     }
 
