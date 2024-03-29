@@ -5,7 +5,6 @@ import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import MobileMenu from "./Components/MobileMenu";
 import Home from "./Pages/Home";
-import Order from "./Pages/Order";
 import Support from "./Pages/Support";
 
 function App() {
@@ -98,7 +97,6 @@ function App() {
           <div className="main-content">
             <Routes>
               <Route path='/' element={<Home title={"Департамент освіти УЦХВЄ"} />} />
-              <Route path='/order' element={<Order title={"Департамент освіти УЦХВЄ - Замовлення книг"} />} />
               {/* <Route path='/support' element={<Support title={"Департамент освіти УЦХВЄ - Підтримати"} />} /> */}
             </Routes>
           </div>

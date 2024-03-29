@@ -323,18 +323,9 @@
     }
 
     /* BOOKS */
-    .books-cards-container {
-        max-width: 450px;
-        margin: 0 auto;
-    }
-
-    .book-card {
-        max-width: 170px;
-    }
-
-    .book-card-img-container {
-        width: 102px;
-        height: 136px;
+    .books-container a {
+        font-size: 15px;
+        padding: 10px 20px;
     }
 
     .book-card h3 {
@@ -533,78 +524,6 @@
 
     .institution-card:nth-child(2n) .institution-card-image {
         margin-right: 15px;
-    }
-
-    /* SHOP CART BUTTON */
-    .shop-cart-button {
-        font-size: 12px;
-        line-height: 16px;
-        padding: 6px 9px;
-    }
-
-    .shop-cart-button div,
-    .shop-cart-button div svg {
-        max-width: 10px;
-        max-height: 8px;
-    }
-
-    #shop-cart-icon-count {
-        font-size: 6px;
-        line-height: 8px;
-        width: 11px;
-        height: 11px;
-        top: -3px;
-        right: -5px;
-    }
-
-    /* ORDER PAGE */
-    .order-page-container {
-        padding-top: 93px;
-    }
-    
-    .order-page-container h1 {
-        font-weight: 700;
-        font-size: 30px;
-        line-height: 35px;
-        margin-bottom: 24px;
-    }
-
-    .order-page-head-content {
-        font-weight: 600;
-        font-size: 15px;
-        line-height: 25px;
-        max-width: 265px;
-        margin-bottom: 53px;
-    }
-
-    /* .order-body {
-        margin-bottom: 69px;
-    } */
-
-    .order-body h2 {
-        font-size: 25px;
-        line-height: 31px;
-    }
-
-    .order-form-background {
-        width: 392px;
-        height: 469px;
-        margin-right: 17px;
-    }
-
-    .order-form label span,
-    .order-form label input {
-        font-size: 13px;
-        line-height: 18px;
-    }
-
-    /* .order-form button {
-        right: calc((100% - 231.6px) / 2);
-        bottom: 60px;
-    } */
-
-    .order-cards {
-        align-items: center;
     }
 }
 
@@ -855,10 +774,6 @@
         margin-bottom: 40px;
     }
 
-    .books-cards-container {
-        max-width: 345px;
-    }
-
     .books-cards {
         row-gap: 42px;
         align-items: center;
@@ -867,12 +782,6 @@
     .book-card-block {
         margin-bottom: 6px;
         justify-content: center;
-    }
-
-    .book-card {
-        max-width: 255px;
-        width: 255px;
-        justify-content: flex-start;
     }
 
     .book-card-img-container {
@@ -992,111 +901,12 @@
     .institution-container h2 {
         margin-bottom: 33px;
     }
-
-    /* ORDER PAGE */
-    .order-page-container {
-        padding-top: 63px;
-    }
-
-    .order-body h2 {
-        transform: translateY(20px);
-    }
-
-    /* .order-page-container h1 {
-        font-size: 22px;
-        line-height: 27px;
-        margin-bottom: 11px;
-    } */
-
-    /* .order-page-head-content {
-        margin-bottom: 5px;
-    } */
-
-    .order-form-body {
-        flex-direction: column;
-    }
-
-    /* .order-cards {
-        margin-bottom: 10px;
-    } */
-
-    .order-form-background {
-        width: 240px;
-        height: 283px;
-        margin-right: 0;
-    }
-
-    .order-form button {
-        font-weight: 600;
-        font-size: 13px;
-        line-height: 23px;
-        right: calc((100% - 184.17px) / 2);
-    }
-
-    .order-card-img-container {
-        width: 82px;
-        height: 109px;
-    }
-
-    .order-card-content h2 {
-        font-weight: 600;
-        font-size: 13px;
-        line-height: 18px;
-    }
-
-    .order-card-checkbox, .order-card-checkbox label {
-        align-items: center;
-    }
-
-    .order-card-checkbox svg {
-        max-width: 13px;
-        max-height: 13px;
-    }
-
-    .order-card-checkbox span, .order-card-checkbox label span {
-        font-weight: 600;
-        font-size: 13px;
-        line-height: 18px;
-    }
-
-    /* .order-count {
-        width: 22px;
-        height: 22px;
-    } */
-
-    .order-delete-btn {
-        font-weight: 600;
-        font-size: 13px;
-        line-height: 18px;
-    }
-
-    .order-total-sum p {
-        font-size: 18px;
-        line-height: 24px;
-    }
 }
 
 @media (max-width: 395px){
     .main-screen-content h2 {
         font-size: 20px;
         line-height: 35px;
-    }
-}
-
-@media (max-width: 354px){
-    .order-count,
-    .order-minus-container,
-    .order-plus-container {
-        width: 20px;
-        height: 20px;
-    }
-
-    .order-card-content h2,
-    .order-card-checkbox span,
-    .order-card-checkbox label span,
-    .order-delete-btn {
-        font-size: 11px;
-        line-height: 15px;
     }
 }
 
@@ -1107,14 +917,4 @@
         align-items: center;
         row-gap: 20px;
     }
-}
-
-@media (max-width: 320px){
-    /* .books-cards {
-        align-items: center;
-    }
-
-    .book-card-block {
-        justify-content: center;
-    } */
 }

@@ -7,7 +7,6 @@ import AdmTeam from "../../Components/HomePage/AdmTeam";
 import Books from "../../Components/HomePage/Books";
 import Projects from "../../Components/HomePage/Projects";
 import Institutions from "../../Components/HomePage/Institutions";
-import ShopCartButton from "../../Components/ShopCartButton";
 
 function Home(props) {
   const { title } = props;
@@ -82,7 +81,6 @@ function Home(props) {
       <Books />
       <Projects />
       <Institutions />
-      <ShopCartButton />
     </>
   );
 }
